@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "1a7dbbeb-35eb-42f2-8c2f-a4323d614807",
+		"name": "Client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26491752"
+	},
+	"item": [
+		{
+			"name": "Obtener todos los clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/client/84309ced7e8a4562b9e179703010113411111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"84309ced7e8a4562b9e179703010113411111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typeDocument\": \"dni\",\r\n    \"nroDocument\" : \"123\",\r\n    \"name\" : \"Fernando  Torres2\",\r\n    \"typeClient\" : \"bussines\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/client/84309ced7e8a4562b9e1797030101134",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"84309ced7e8a4562b9e1797030101134"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typeDocument\": \"dni\",\r\n    \"nroDocument\" : \"666888\",\r\n    \"name\" : \"Fernando  Torres2\",\r\n    \"typeClient\" : \"personal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client/update/7ca25c746df14dfbb1cc034e52fb5374",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"update",
+						"7ca25c746df14dfbb1cc034e52fb5374"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "NOT FOUND",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeDocument\": \"dni\",\r\n    \"nroDocument\" : \"666888\",\r\n    \"name\" : \"Fernando  Torres2\",\r\n    \"typeClient\" : \"personal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/client/update/7ca25c746df14dfbb1cc034e52fb5374",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"client",
+								"update",
+								"7ca25c746df14dfbb1cc034e52fb5374"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"httpStatus\": \"NOT_FOUND\",\n    \"message\": \"No existe el cliente o el nrodocumento no es el correcto\"\n}"
+				}
+			]
+		}
+	]
+}
