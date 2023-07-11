@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "4cb0782b-b3be-4088-b9f3-f83577ceb7ab",
+		"name": "transaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26491752"
+	},
+	"item": [
+		{
+			"name": "Retiro Cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : \"16c96fb6997a430fa99147e26dadad00\",\r\n    \"clientId\" : \"195312f0385c483c97a00fe5693c2c77\", \r\n    \"amount\" : 5.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/transaction/account/retiro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transaction",
+						"account",
+						"retiro"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\" : \"16c96fb6997a430fa99147e26dadad00\",\r\n    \"clientId\" : \"195312f0385c483c97a00fe5693c2c77\", \r\n    \"amount\" : 5.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/transaction/account/retiro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transaction",
+								"account",
+								"retiro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"64acadfc68379d462b6b99a3\",\n    \"from\": \"16c96fb6997a430fa99147e26dadad00\",\n    \"to\": \"CAJERO\",\n    \"category\": null,\n    \"balance\": 7,\n    \"date\": \"2023-07-10 20:18:39\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Deposito Cuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : \"16c96fb6997a430fa99147e26dadad00\",\r\n    \"clientId\" : \"195312f0385c483c97a00fe5693c2c77\", \r\n    \"amount\" : 5.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/transaction/account/deposito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transaction",
+						"account",
+						"deposito"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\" : \"16c96fb6997a430fa99147e26dadad00\",\r\n    \"clientId\" : \"195312f0385c483c97a00fe5693c2c77\", \r\n    \"amount\" : 5.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/transaction/account/retiro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transaction",
+								"account",
+								"retiro"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"64acadfc68379d462b6b99a3\",\n    \"from\": \"16c96fb6997a430fa99147e26dadad00\",\n    \"to\": \"CAJERO\",\n    \"category\": null,\n    \"balance\": 7,\n    \"date\": \"2023-07-10 20:18:39\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Transferencia entre cuentas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\" : \"8fb108bfb30f48e2875c30043bbb1fcd\",\r\n    \"to\" : \"16c96fb6997a430fa99147e26dadad00\",\r\n    \"amount\" :\"10\",\r\n    \"clientId\" :\"195312f0385c483c97a00fe5693c2c77\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transaction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\" : \"8fb108bfb30f48e2875c30043bbb1fcd\",\r\n    \"to\" : \"16c96fb6997a430fa99147e26dadad00\",\r\n    \"amount\" :\"10\",\r\n    \"clientId\" :\"195312f0385c483c97a00fe5693c2c77\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"transaction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "232"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"64ace34887a0693f3ee7138c\",\n    \"from\": \"8fb108bfb30f48e2875c30043bbb1fcd\",\n    \"to\": \"8fb108bfb30f48e2875c30043bbb1fcd\",\n    \"category\": \"TRANSFERENCIA\",\n    \"balance\": 10,\n    \"date\": \"2023-07-11 00:06:16\",\n    \"clientId\": \"195312f0385c483c97a00fe5693c2c77\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Todas las transferencia de un cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/transaction/all/195312f0385c483c97a00fe5693c2c77",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"transaction",
+						"all",
+						"195312f0385c483c97a00fe5693c2c77"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
